@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import main
+from .views import TeamsView, TeamAdd
 
 urlpatterns = [
-    path('', main)
+    path('', TeamAdd.as_view()),
+    path('teams', TeamsView.as_view()),
+
 ]
